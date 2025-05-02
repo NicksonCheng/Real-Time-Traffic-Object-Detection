@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLO Video Grid</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 10px;
+        }
+        .video-frame {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOLOv8 Video Object Detection</h1>
+    <div class="grid">
+        {% for i in range(num_videos) %}
+            <div class="video-frame">
+                <img src="{{ url_for('video_feed', video_id=i) }}" width="100%">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

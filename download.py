@@ -8,4 +8,4 @@
 
 import dataset_tools as dtools
 
-dtools.download(dataset='BDD100K: Images 100K', dst_dir='dataset-ninja')
+dtools.download(dataset="BDD100K: Images 100K", dst_dir="dataset-ninja")
